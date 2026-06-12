@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0f0f12;
+  --surface: #1a1a22;
+  --border: #2e2e3a;
+  --text: #f2f0eb;
+  --muted: #9b97a8;
+  --accent: #c9a227;
+  --accent-dim: #8a7420;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  min-height: 100dvh;
+}
+
+a {
+  color: var(--accent);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+dialog {
+  color: var(--text);
+}
+
+dialog input,
+dialog button {
+  color: inherit;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes dictation-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 4px 0 rgba(201, 162, 39, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 16px 2px rgba(201, 162, 39, 0.35);
+  }
+}
+
+.dictation-status-glow {
+  animation: dictation-glow 2s ease-in-out infinite;
+}

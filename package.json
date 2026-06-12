@@ -1,0 +1,24 @@
+{
+  "name": "audiobook-studio",
+  "private": false,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @book-reader/web",
+    "dev:watcher": "npm run dev -w @book-reader/watcher",
+    "build": "npm run build -w @book-reader/web",
+    "lint": "npm run lint -w @book-reader/web",
+    "test": "npm run test -w @book-reader/core",
+    "repair:library": "node apps/web/scripts/repair-library.mjs",
+    "migrate:audio-local": "node apps/web/scripts/migrate-audio-to-local.mjs",
+    "relink:audio-local": "node apps/web/scripts/relink-local-audio.mjs",
+    "align:audio-local": "node apps/web/scripts/generate-alignment-local.mjs",
+    "setup:piper": "node apps/web/scripts/setup-piper.mjs",
+    "piper:test": "node apps/web/scripts/piper-audition.mjs",
+    "setup:edge": "node apps/web/scripts/setup-edge.mjs",
+    "edge:test": "node apps/web/scripts/edge-audition.mjs",
+    "scaffold:library": "node packages/author-kit/scaffold-library.mjs"
+  }
+}

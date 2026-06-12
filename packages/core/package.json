@@ -1,0 +1,18 @@
+{
+  "name": "@book-reader/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/vitest/vitest.mjs run 2>/dev/null || npx vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  }
+}

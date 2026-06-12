@@ -1,0 +1,33 @@
+{
+  "name": "@book-reader/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/sync-env.mjs && next dev -p 3001 -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@book-reader/core": "*",
+    "better-sqlite3": "^12.10.0",
+    "next": "^15.2.4",
+    "openai": "^4.91.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.17",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "dotenv": "^16.6.1",
+    "eslint": "^9.22.0",
+    "eslint-config-next": "^15.2.4",
+    "tailwindcss": "^4.0.17",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  }
+}
